@@ -1,0 +1,109 @@
+/*-- scss:defaults --*/
+
+// fonts
+
+// FiraCode is OpenSource and looks nice, so we'll use it here
+@import url(https://cdn.rawgit.com/tonsky/FiraCode/1.204/distr/fira_code.css);
+
+// define AAGI colours
+
+$colors: (
+  "aagi-black": #414042,
+  "aagi-blue": #648fd2,
+  "aagi-bright-green": #b6d438,
+  "aagi-green": #54921e,
+  "aagi-grey": #f2f2f2,
+  "aagi-orange": #ec8525,
+  "aagi-teal": #00808b,
+  "aagi-yellow": #ffbc42,
+);
+
+// functions
+// From Emil Hvitfeldt, <https://emilhvitfeldt.com/post/slidecraft-scss-uses/>
+
+@function theme-color($color) {
+  @return map-get($colors, $color);
+}
+
+// colours
+
+$link-color: theme-color("aagi-teal") !default;
+$body-color: theme-color("aagi-black") !default;
+
+// fonts
+
+$font-family-sans-serif: "Proxima Nova", Arial;
+$font-family-monospace: "Fira Code";
+
+$presentation-h1-font-size: 2em;
+$presentation-h2-font-size: 1.75em;
+$presentation-h3-font-size: 1.5em;
+$presentation-font-size-root: 2em;
+
+// question callout block
+$question-border-color-left: #B6D438 !default;
+$question-icon: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/><path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286m1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94"/></svg>') !default;
+$question-background-color: #a6c687 !default;
+
+/*-- scss:rules --*/
+
+.reveal h1 {
+  font-weight: lighter;
+}
+
+.reveal h3 {
+  font-weight: lighter;
+}
+
+.reveal p li {
+  font-weight: lighter;
+}
+
+.quarto-title-authors {
+  font-size: 28px;
+}
+
+.reveal .slides {
+  border-bottom: solid 0.25em theme_color("aagi-teal");
+}
+
+.reveal table,
+th,
+td {
+  border: 2px solid #ffffff;
+  background: theme_color("aagi-grey");
+  color: theme_color("aagi-black");
+}
+
+.reveal table th {
+  color: #ffffff;
+  background:theme-color("aagi-teal");
+}
+
+.reveal .aside {
+  font-size: 0.25em;
+  color: theme-color("aagi-grey")
+}
+
+/*-- Custom Callout for Question/Exercise --*/
+
+div.callout-question.callout {
+  border-left-color: $question-border-color-left;
+}
+
+div.callout-question.callout-style-default>.callout-header {
+  background-color: $question-background-color;
+}
+
+.callout-question.icon .callout-icon {
+  display: unset !important;
+}
+
+div.callout-question.icon.callout-captioned .callout-icon::before {
+  background-image: $question-icon;
+}
+
+.callout-question.icon.callout-style-default div.callout-icon-container {
+  padding-top: 0.1em;
+  padding-right: 0.35em;
+}
