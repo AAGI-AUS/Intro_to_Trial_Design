@@ -1,5 +1,5 @@
 ---
-title: "GGA training session 2 -- Introduction to Trial Design"
+title: "Introduction to Trial Design"
 author: "Adam H. Sparks"
 date: "2024-09-05"
 institute: Curtin Biometry and Agricultural Data Analytics
