@@ -52,7 +52,7 @@ jobs:
           tinytex: true # required for PDF reports
 
       - name: Add extension
-        working-directory: ./
+        working-directory: ./docs
         run: |
           quarto add AAGI-AUS/AAGIQuarto --no-prompt
 

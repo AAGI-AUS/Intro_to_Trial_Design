@@ -1,0 +1,32 @@
+project:
+  type: website
+  resources:
+    - assets/*
+
+website:
+  title: "Introduction to Trial Design"
+  reader-mode: true
+  repo-url: https://github.com/AAGI-AUS/Intro_to_Trial_Design
+  repo-actions: [edit, issue]
+  margin-header: |
+    ![](/assets/aagi-logo.svg)
+  body-footer: |
+    ![](/assets/Partners.svg)
+  sidebar:
+    style: "floating"
+    search: true
+    tools:
+      - icon: github
+        href: https://github.com/AAGI-AUS/Intro_to_Trial_Design
+    contents:
+      - text: "Home"
+        file: index.qmd
+      - section: "Extra"
+        contents:
+          - release-notes.qmd
+format:
+  html:
+    toc: true
+    theme:
+      - none
+      - _extensions/aagi/revealjs/aagi.scss
