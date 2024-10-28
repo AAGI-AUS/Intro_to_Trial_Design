@@ -14,5 +14,3 @@ You will need [Quarto](https://quarto.org) installed locally to rebuild the slid
 Then, the `aagi_cu_trial_design.qmd` can be knit to create `aagi_cu_trial_design.html`.
 
 [Playwright.py](https://playwright.dev/python/docs/intro) was used to generate `aagi_cu_trial_design.pdf` for printed handouts via `render_pdf.py`.
-
-
