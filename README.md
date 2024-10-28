@@ -4,7 +4,7 @@ An AAGI [reveal.js](https://revealjs.com) slide deck built with [Quarto](https:/
 
 ## Viewing and Presenting the Slides
 
-Go [here]() and hit "S" for a separate window that will have the speaker notes so you can see what each slide covers in more detail.
+Go [here](https://aagi-aus.github.io/Intro_to_Trial_Design/aagi_cu_trial_design.html#/title-slide) and hit "S" for a separate window that will have the speaker notes so you can see what each slide covers in more detail.
 Hit "F" on the main screen for a full-screen or select from the hamburger menu icon in the lower left corner of your screen.
 
 ## Modifying and Building

@@ -1,0 +1,254 @@
+[
+  {
+    "objectID": "aagi_cu_trial_design.html#outline",
+    "href": "aagi_cu_trial_design.html#outline",
+    "title": "Introduction to Trial Design",
+    "section": "Outline",
+    "text": "Outline\nInteractive session with exercises throughout\n\nRole of the Experimental Design\nLocal Controls of Variability\nReplication\nRandomisation\nBlocking"
+  },
+  {
+    "objectID": "aagi_cu_trial_design.html#outline-1",
+    "href": "aagi_cu_trial_design.html#outline-1",
+    "title": "Introduction to Trial Design",
+    "section": "Outline",
+    "text": "Outline\nDesigns\n\nComplete Randomised Design;\nRandomised Complete Block Design (RCBD);\nSplit plot and\nOFE Strip Trial"
+  },
+  {
+    "objectID": "aagi_cu_trial_design.html#good-experimental-design",
+    "href": "aagi_cu_trial_design.html#good-experimental-design",
+    "title": "Introduction to Trial Design",
+    "section": "Good Experimental Design",
+    "text": "Good Experimental Design\n\n\nA good design should address the objectives of the experiment/hypothesis to be tested\n\nIntroducing experimental design in the trial aims at:\n\nReducing or at least controlling the error (variation);\nAttaining maximum information, precision and accuracy of the result, by producing the best unbiased estimates of the treatment means; and\nThe most efficient use of existing resources."
+  },
+  {
+    "objectID": "aagi_cu_trial_design.html#poor-experimental-design",
+    "href": "aagi_cu_trial_design.html#poor-experimental-design",
+    "title": "Introduction to Trial Design",
+    "section": "Poor Experimental Design",
+    "text": "Poor Experimental Design\n\n\n\nFrom: The Hunt for Red October (1990)\n\n\n\nKeep in mind that nothing can compensate for a poor design. Start by consulting with AAGI first to help ensure that you don’t waste your time and resources.\nPoor design leads to:\n\nWrong conclusions and wasted resources and\nNo statistical analysis."
+  },
+  {
+    "objectID": "aagi_cu_trial_design.html#data-collection",
+    "href": "aagi_cu_trial_design.html#data-collection",
+    "title": "Introduction to Trial Design",
+    "section": "Data Collection",
+    "text": "Data Collection\nTechnique used for collecting the data — affects variation and may introduce bias, e.g.\n\nBad calibration of the measuring equipment;\nHuman error when measuring/recording;\nOperators/scorers differences in measuring/assessing (inter and intra-rater repeatability)."
+  },
+  {
+    "objectID": "aagi_cu_trial_design.html#trial-placement",
+    "href": "aagi_cu_trial_design.html#trial-placement",
+    "title": "Introduction to Trial Design",
+    "section": "Trial Placement",
+    "text": "Trial Placement\n\n\nConsider an example paddock that has three soil types.\nSelection of uniform plots (experimental units), homogeneous plots produce small experimental error variance for small plot trials.\nUsually, in field trials soil fertility and moisture trends affect the uniformity of the plots. This variability is also what affects large, paddock-scale OFEs."
+  },
+  {
+    "objectID": "aagi_cu_trial_design.html#small-plot-trial-placement",
+    "href": "aagi_cu_trial_design.html#small-plot-trial-placement",
+    "title": "Introduction to Trial Design",
+    "section": "Small Plot Trial Placement",
+    "text": "Small Plot Trial Placement\n\n\nPlacing the small plot trials in an area of one soil type reduces the variability and increases uniformity of the plots."
+  },
+  {
+    "objectID": "aagi_cu_trial_design.html#ofe-paddock-scale-or-strip-design-trial-placement",
+    "href": "aagi_cu_trial_design.html#ofe-paddock-scale-or-strip-design-trial-placement",
+    "title": "Introduction to Trial Design",
+    "section": "OFE Paddock Scale or Strip Design Trial Placement",
+    "text": "OFE Paddock Scale or Strip Design Trial Placement\n\n\nHowever, with an OFE trial, we want to cover these differences.\nHere we have plots that run the entire length of the paddock and cover the differences in soil types.\nThis means that these plots can be used to determine how the different treatments might act in other parts of the paddock."
+  },
+  {
+    "objectID": "aagi_cu_trial_design.html#blocking",
+    "href": "aagi_cu_trial_design.html#blocking",
+    "title": "Introduction to Trial Design",
+    "section": "Blocking",
+    "text": "Blocking\nBlocking\n\nthe plots are grouped in blocks such that the variability of the plots within the blocks is less than that among all plots prior to grouping.\n\n\nAmong the most frequently used criteria for blocking are: proximity and homogeneity (field plots); time; physical characteristics (age, height, weight); management /agronomic practices. Failure to use blocks will result in distortion of relative means and inflated standard errors."
+  },
+  {
+    "objectID": "aagi_cu_trial_design.html#blocking-1",
+    "href": "aagi_cu_trial_design.html#blocking-1",
+    "title": "Introduction to Trial Design",
+    "section": "Blocking",
+    "text": "Blocking\n\nIn field trials blocking is often done on the basis of soil fertility and moisture trends, i.e., soil homogeneity;\nOn a sloping trial site the moisture differs at different levels of the slope;\n\nBlocks are usually chosen at different levels up the slope so the that the difference in moisture between blocks is maximised and the difference in moisture within the blocks is minimised;\n\nA trial site known to have different soil fertility trends should be blocked accordingly, separating the blocks based on the soil quality."
+  },
+  {
+    "objectID": "aagi_cu_trial_design.html#blocking-example",
+    "href": "aagi_cu_trial_design.html#blocking-example",
+    "title": "Introduction to Trial Design",
+    "section": "Blocking Example",
+    "text": "Blocking Example\n\n\n\nSource: Prof Sarita Bennett, Curtin University\n\n\n\nHere’s a chickpea experiment where the lower block was affected with higher levels of Ascochyta blight and browning off following waterlogging during the winter.\nWithout blocking the trial would have been of no use."
+  },
+  {
+    "objectID": "aagi_cu_trial_design.html#blocking-exercise",
+    "href": "aagi_cu_trial_design.html#blocking-exercise",
+    "title": "Introduction to Trial Design",
+    "section": "Blocking Exercise",
+    "text": "Blocking Exercise\n\n\n\nSource: Prof Sarita Bennett, Curtin University\n\n\n\n\n\n Exercise (2 min)\n\n\nWhat do you think blocking did that made this experiment useable?\n\n\n\n\nHere’s a chickpea experiment where the lower block was affected with higher levels of Ascochyta blight and browning off following waterlogging during the winter.\nWithout blocking the trial would have been of no use."
+  },
+  {
+    "objectID": "aagi_cu_trial_design.html#blocking-2",
+    "href": "aagi_cu_trial_design.html#blocking-2",
+    "title": "Introduction to Trial Design",
+    "section": "Blocking",
+    "text": "Blocking\nIt is important to avoid confounding when defining blocks.\nExamples:\n\nDifferent time of sowing (TOS), TOS is a treatment, is assigned to different blocks in the field;\nDifferent seeding rates (SR) are applied to different blocks in the field where SR is a treatment;\nDifferent nitrogen rates (NR) are applied to different blocks in the field where NR is a treatment;\nA complete block should contain each treatment replicated once.\n\n\nIn poorly designed trials, blocks can be confounded with some treatments. In such cases the statistical model cannot distinguish between the variation due to the blocking and the variation due to the treatment."
+  },
+  {
+    "objectID": "aagi_cu_trial_design.html#blocking-barley-varieties",
+    "href": "aagi_cu_trial_design.html#blocking-barley-varieties",
+    "title": "Introduction to Trial Design",
+    "section": "Blocking Barley Varieties",
+    "text": "Blocking Barley Varieties\n\n\n\n\n\n\nYield of barley varieties A, B, C and D in kg/ha.\n\n\nreplicate\nA\nB\nC\nD\n\n\n\n\n1\n1120\n1240\n1360\n1480\n\n\n2\n880\n940\n1080\n1170\n\n\n3\n1120\n1250\n1440\n1570\n\n\n4\n1240\n1360\n1340\n1420\n\n\n5\n1310\n1440\n1460\n1560\n\n\n\n\n\n\n\n\nThe blocking structure here is introduced by replicates."
+  },
+  {
+    "objectID": "aagi_cu_trial_design.html#blocking-exercise-1",
+    "href": "aagi_cu_trial_design.html#blocking-exercise-1",
+    "title": "Introduction to Trial Design",
+    "section": "Blocking Exercise",
+    "text": "Blocking Exercise\n\n\n\n\n\n\nYield of barley varieties A, B, C and D in kg/ha.\n\n\nreplicate\nA\nB\nC\nD\n\n\n\n\n1\n1120\n1240\n1360\n1480\n\n\n2\n880\n940\n1080\n1170\n\n\n3\n1120\n1250\n1440\n1570\n\n\n4\n1240\n1360\n1340\n1420\n\n\n5\n1310\n1440\n1460\n1560\n\n\n\n\n\n\n\n\n\n\n Exercise (2 min)\n\n\nWhat pattern or patterns can you see in these data?\n\n\n\n\nSpend a few minutes and look at this table.\nCan you see patterns?\nWhat are they?"
+  },
+  {
+    "objectID": "aagi_cu_trial_design.html#blocking-barley-varieties-1",
+    "href": "aagi_cu_trial_design.html#blocking-barley-varieties-1",
+    "title": "Introduction to Trial Design",
+    "section": "Blocking Barley Varieties",
+    "text": "Blocking Barley Varieties\n\nBarley variety on the x-axis by yield (kg/ha) on the y-axis with variety represented as colour and replicate as shape.\nDoes the pattern stand out more now that we’ve plotted the data?"
+  },
+  {
+    "objectID": "aagi_cu_trial_design.html#blocking-exercise-2",
+    "href": "aagi_cu_trial_design.html#blocking-exercise-2",
+    "title": "Introduction to Trial Design",
+    "section": "Blocking Exercise",
+    "text": "Blocking Exercise\n\nSource: Dr Karyn Reeves, SAGI West\n\n\n Exercise (2 min)\n\n\nWhich design is valid?\nWhat makes one invalid and the other valid?"
+  },
+  {
+    "objectID": "aagi_cu_trial_design.html#replication",
+    "href": "aagi_cu_trial_design.html#replication",
+    "title": "Introduction to Trial Design",
+    "section": "Replication",
+    "text": "Replication\nReplication implies independent repetition of the basic experiment. Replication is considered very important for valid experimental results due to the fact that it:\n\nprovides the means to estimate the experimental error variance;\nprovides the capacity to increase the precision of the estimates of the treatment means;\ndemonstrates the reproducibility of the results under current experimental settings; and\nprovides additional data in case of non-consistent results (presence of outliers due to environmental conditions like e.g., waterlogged plots or affected by birds or elephants)."
+  },
+  {
+    "objectID": "aagi_cu_trial_design.html#replication-1",
+    "href": "aagi_cu_trial_design.html#replication-1",
+    "title": "Introduction to Trial Design",
+    "section": "Replication",
+    "text": "Replication\nHow Many?\n\nThe number of replications affects the precision of treatment means estimates\nShould be chosen to provide acceptable power of statistical tests to identify differences between the means of treatment groups\nConsider whether the planned level of replication may be expected to give standard errors which are acceptably small\nProviding there is no huge variability, meaning:\n\nthe area allocated to the trial is relatively homogeneous and\nthe traits of interest are reasonably variable, 2 to 3 replicates should be sufficient\n\n\n\n\nThe replication is usually mainly determined by considerations of the use of resources.\nWhat is acceptably small standard errors are depends on the nature of the experiment and treatments."
+  },
+  {
+    "objectID": "aagi_cu_trial_design.html#pseudo-replication",
+    "href": "aagi_cu_trial_design.html#pseudo-replication",
+    "title": "Introduction to Trial Design",
+    "section": "Pseudo-replication",
+    "text": "Pseudo-replication\n\nSource: Dr Karyn Reeves, SAGI West"
+  },
+  {
+    "objectID": "aagi_cu_trial_design.html#pseudo-replication-1",
+    "href": "aagi_cu_trial_design.html#pseudo-replication-1",
+    "title": "Introduction to Trial Design",
+    "section": "Pseudo-replication",
+    "text": "Pseudo-replication\n\nSource: Dr Karyn Reeves, SAGI West\n\n\n Exercise (5 min)\n\n\nWhat makes this design invalid?\nWhat would you suggest to do that would make it a valid design?"
+  },
+  {
+    "objectID": "aagi_cu_trial_design.html#randomisation",
+    "href": "aagi_cu_trial_design.html#randomisation",
+    "title": "Introduction to Trial Design",
+    "section": "Randomisation",
+    "text": "Randomisation\n\n\n\n\n\n\nRandomisation is the random assignment of treatments to plots (experimental units)\n\nRandomisation is used to avoid:\n\nsystematic bias;\nselection bias;\naccidental bias and\ncheating\n\n\nConsider a paddock that has a gradient in the soil. If you put three treatments in the same order across the paddock, one treatment will always be in the best part of the soil in the block and one in the worst soil in the block, affecting the determinations you can make about your treatments."
+  },
+  {
+    "objectID": "aagi_cu_trial_design.html#trial-designs-1",
+    "href": "aagi_cu_trial_design.html#trial-designs-1",
+    "title": "Introduction to Trial Design",
+    "section": "Trial Designs",
+    "text": "Trial Designs\nWe will discuss the following four designs:\n\nComplete Randomised Design (CRD);\nRandomised Complete Block Design (RCBD);\nSplit-plot; and\nOFE paddock-scale"
+  },
+  {
+    "objectID": "aagi_cu_trial_design.html#complete-randomised-design-crd",
+    "href": "aagi_cu_trial_design.html#complete-randomised-design-crd",
+    "title": "Introduction to Trial Design",
+    "section": "Complete Randomised Design (CRD)",
+    "text": "Complete Randomised Design (CRD)\n\nCRD is the simplest design without blocking\nTreatments are allocated to the plots at random\nCRD is most useful in experimental settings where there are no other sources of variation than treatments"
+  },
+  {
+    "objectID": "aagi_cu_trial_design.html#complete-randomised-design-crd-1",
+    "href": "aagi_cu_trial_design.html#complete-randomised-design-crd-1",
+    "title": "Introduction to Trial Design",
+    "section": "Complete Randomised Design (CRD)",
+    "text": "Complete Randomised Design (CRD)\n\n\nCRD is the simplest design without blocking\nTreatments are allocated to the plots at random\nCRD is most useful in experimental settings where there are no other sources of variation than treatments\n\n\n\n\n\n\n\n\nNote\n\n\nUncommonly used in agricultural paddocks for this reason\n\n\n\n\nI won’t spend much time on this one, I wanted to mention it because I saw some of the examples sent through by GGA that referred to this layout, but really, they were randomised complete block design, which is the next design I’ll talk about."
+  },
+  {
+    "objectID": "aagi_cu_trial_design.html#randomised-complete-block-design-rcbd",
+    "href": "aagi_cu_trial_design.html#randomised-complete-block-design-rcbd",
+    "title": "Introduction to Trial Design",
+    "section": "Randomised Complete Block Design (RCBD)",
+    "text": "Randomised Complete Block Design (RCBD)\nRCBD is an experimental design with one blocking criterion, usually replicates.\nAll treatments occur an equal number of times in each block randomly."
+  },
+  {
+    "objectID": "aagi_cu_trial_design.html#randomised-complete-block-design-rcbc-exercise",
+    "href": "aagi_cu_trial_design.html#randomised-complete-block-design-rcbc-exercise",
+    "title": "Introduction to Trial Design",
+    "section": "Randomised Complete Block Design (RCBC) Exercise",
+    "text": "Randomised Complete Block Design (RCBC) Exercise\n\n\n\n Exercise (5 min)\n\n\nThinking back to the earlier barley yield example and following the description of blocking and randomisation, draw a trial map that has four varieties, A, B, C and D and five replicates (blocks) to test varietal differences in yield.\nEach variety should be represented in each replicate only once.\nRecognise that this is just an exercise, it is not recommended to do this by hand. Using random number tables, a sequence or random numbers generated by a computer program are preferred. AAGI can help with this."
+  },
+  {
+    "objectID": "aagi_cu_trial_design.html#randomised-complete-block-design-rcbc",
+    "href": "aagi_cu_trial_design.html#randomised-complete-block-design-rcbc",
+    "title": "Introduction to Trial Design",
+    "section": "Randomised Complete Block Design (RCBC)",
+    "text": "Randomised Complete Block Design (RCBC)\n\n\n\n\n\n\n\n\n\nCol 1\nCol 2\nCol 3\nCol 4\n\n\n\n\nRep 1\nD\nB\nA\nC\n\n\nRep 2\nB\nC\nD\nA\n\n\nRep 3\nA\nD\nC\nB\n\n\nRep 4\nC\nD\nA\nB\n\n\nRep 5\nA\nC\nD\nB\n\n\n\n\n\n\n\n\nHere the replicates are the rows of the layout. This was generated in R using a library that specialises in designing agriculture trials like this and so has been randomised programmatically."
+  },
+  {
+    "objectID": "aagi_cu_trial_design.html#split-plot-design",
+    "href": "aagi_cu_trial_design.html#split-plot-design",
+    "title": "Introduction to Trial Design",
+    "section": "Split Plot Design",
+    "text": "Split Plot Design\nExample: Lupin Seeding Rate Trial\n\n\n6 commercial lupin varieties:\n\nJenabillup (Je),\nJindalee (Ji),\nQuilinock (Qu),\nBelara (Be),\nMandelup (Ma) and\nTanjil (Ta)\n\n3 seeding rates\n3 replicates\n\n\n\nWhat would be the best design to use?\nWe may reason in the following way: There are 18 main plots = 6 varieties x 3 replicates. We may allocate the 3 seeding rates as subplots within the main plot. The seeding rates will be randomized within the main plot. We may allocate the main plots in an array of 6 columns by 3 rows, so columns 1 and 2 will constitute the 1st replicate, columns 3 and 4 - the 2nd replicate and columns 5 and 6 - the 3rd replicate."
+  },
+  {
+    "objectID": "aagi_cu_trial_design.html#split-plot-design-exercise",
+    "href": "aagi_cu_trial_design.html#split-plot-design-exercise",
+    "title": "Introduction to Trial Design",
+    "section": "Split Plot Design Exercise",
+    "text": "Split Plot Design Exercise\n\n\n\n\n Exercise (10 min)\n\n\nDraw a map that has 6 columns and 3 rows, columns 1 and 2 are the main plots in the first 1st replicate (there will be six in each replicate) and so on.\n\n6 commercial lupin varieties:\n\nJenabillup (Je),\nJindalee (Ji),\nQuilinock (Qu),\nBelara (Be),\nMandelup (Ma) and\nTanjil (Ta)\n\n3 seeding rates\n3 replicates"
+  },
+  {
+    "objectID": "aagi_cu_trial_design.html#split-plot-design-1",
+    "href": "aagi_cu_trial_design.html#split-plot-design-1",
+    "title": "Introduction to Trial Design",
+    "section": "Split Plot Design",
+    "text": "Split Plot Design\nAnswer\n\nSource: Dr Karyn Reeves, SAGI West"
+  },
+  {
+    "objectID": "aagi_cu_trial_design.html#ofe-paddock-scale-or-strip-design",
+    "href": "aagi_cu_trial_design.html#ofe-paddock-scale-or-strip-design",
+    "title": "Introduction to Trial Design",
+    "section": "OFE Paddock Scale or Strip Design",
+    "text": "OFE Paddock Scale or Strip Design\nDepending on your goals:\n\nA single strip is useful for demonstration and discussion,\nAt least one of these should be a nil strip if you wish to measure the response of the treatments,\nReplicated treatments will provide more robust results."
+  },
+  {
+    "objectID": "aagi_cu_trial_design.html#ofe-strip-trial",
+    "href": "aagi_cu_trial_design.html#ofe-strip-trial",
+    "title": "Introduction to Trial Design",
+    "section": "OFE Strip Trial",
+    "text": "OFE Strip Trial\n\n\n\n\n Exercise (10 min)\n\n\nDesign a randomised complete block strip trial design with three replicates.\nStrips will be arranged to overlay 2-3 farm management units (soil types, soil restraints), consider the 3-soil paddock I showed earlier.\nTreatments:\n\nDepth of seeding: 5, 10cm\nFertiliser: Standard Rate(S), Nil (N)"
+  },
+  {
+    "objectID": "aagi_cu_trial_design.html#ofe-strip-trial-design",
+    "href": "aagi_cu_trial_design.html#ofe-strip-trial-design",
+    "title": "Introduction to Trial Design",
+    "section": "OFE Strip Trial Design",
+    "text": "OFE Strip Trial Design\nOne Possible Answer\n\nComplete randomised strip plot trial with four treatments and three replicates"
+  },
+  {
+    "objectID": "aagi_cu_trial_design.html#wrapping-up",
+    "href": "aagi_cu_trial_design.html#wrapping-up",
+    "title": "Introduction to Trial Design",
+    "section": "Wrapping Up",
+    "text": "Wrapping Up\nRemember\n\nKeep the treatments simple,\n\ncomplexity adds cost and time;\nand weakens the ability of the trial to measure differences\n\nReplicate;\nRandomise;\nTalk with AAGI first, it may save you time, money and headaches!"
+  },
+  {
+    "objectID": "aagi_cu_trial_design.html#section",
+    "href": "aagi_cu_trial_design.html#section",
+    "title": "Introduction to Trial Design",
+    "section": " ",
+    "text": "To consult the statistician after an experiment is finished is often merely to ask him to conduct a post mortem examination. He can perhaps say what the experiment died of.\n- R.A. Fisher, (1938)"
+  }
+]
