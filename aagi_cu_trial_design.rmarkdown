@@ -1,0 +1,552 @@
+---
+title: "Introduction to Trial Design"
+author: "Adam H. Sparks"
+date: "2024-09-05"
+institute: Curtin Biometry and Agricultural Data Analytics
+from: markdown+emoji
+format:
+  aagi-revealjs:
+    incremental: true
+    html-q-tags: true
+bibliography: references.bib
+---
+
+```{r}
+#| include: false
+library(agricolae)
+library(gt)
+library(tidyverse)
+library(AAGIThemes)
+library(AAGIPalettes)
+
+# set ggplot2 theme
+theme_set(theme_aagi())
+```
+
+
+
+## Outline
+
+Interactive session with exercises throughout
+
+- Role of the Experimental Design
+- Local Controls of Variability
+- Replication
+- Randomisation
+- Blocking
+
+## Outline
+
+Designs
+
+- Complete Randomised Design;
+- Randomised Complete Block Design (RCBD);
+- Split plot and
+- OFE Strip Trial
+
+# Role of Experimental Design{background-image="_extensions/AAGI-AUS/aagi/assets/title-slide-main.png" background-size="1050px auto" background-position="50% 85%"}
+
+## Good Experimental Design
+
+![](./assets/dartboard-and-dart-svgrepo-com.svg){fig-align="center" width="80%"}
+
+:::notes
+A good design should address the objectives of the experiment/hypothesis to be tested
+
+- Introducing experimental design in the trial aims at:
+  - Reducing or at least controlling the error (variation);
+  - Attaining maximum information, precision and accuracy of the result, by producing the best unbiased estimates of the treatment means; and
+  - The most efficient use of existing resources.
+:::
+
+## Poor Experimental Design{.nostretch}
+
+![<span style="font-size:0.25em;">From: *The Hunt for Red October* (1990)</span>](./assets/wrong_conclusions.gif){fig-align="center" width="80%"}
+
+:::notes
+Keep in mind that nothing can compensate for a poor design.
+Start by consulting with AAGI first to help ensure that you don't waste your time and resources.
+
+Poor design leads to:
+
+- Wrong conclusions and wasted resources and
+- No statistical analysis.
+:::
+
+# Sources and Controls of Variability{background-image="_extensions/AAGI-AUS/aagi/assets/title-slide-main.png" background-size="1050px auto" background-position="50% 85%"}
+
+## Data Collection
+
+Technique used for collecting the data --- affects variation and may introduce bias, *e.g.*
+
+- Bad calibration of the measuring equipment;
+- Human error when measuring/recording;
+- Operators/scorers differences in measuring/assessing (inter and intra-rater repeatability).
+
+## Trial Placement
+
+![](assets/3-soils-paddock.png){fig-align="center"}
+
+:::notes
+Consider an example paddock that has three soil types.
+
+Selection of uniform plots (experimental units), homogeneous plots produce small experimental error variance for small plot trials.
+
+Usually, in field trials soil fertility and moisture trends affect the uniformity of the plots.
+This variability is also what affects large, paddock-scale OFEs.
+:::
+
+## Small Plot Trial Placement
+
+![](assets/3-soils-paddock-4-small-blocks-1-soil){fig-align="center"}
+
+:::notes
+Placing the small plot trials in an area of one soil type reduces the variability and increases uniformity of the plots.
+:::
+
+## OFE Paddock Scale or Strip Design Trial Placement
+
+![](assets/3-soils-paddock-full-length-OFE.png){fig-align="center"}
+
+:::notes
+However, with an OFE trial, we want to cover these differences.
+
+Here we have plots that run the entire length of the paddock and cover the differences in soil types.
+
+This means that these plots can be used to determine how the different treatments might act in other parts of the paddock.
+:::
+
+## Blocking
+
+Blocking
+
+- the plots are grouped in blocks such that the variability of the plots within the blocks is less than that among all plots prior to grouping.
+
+:::notes
+Among the most frequently used criteria for blocking are: proximity and homogeneity (field plots); time; physical characteristics (age, height, weight); management /agronomic practices.
+Failure to use blocks will result in distortion of relative means and inflated standard errors.
+:::
+
+## Blocking
+
+- In field trials blocking is often done on the basis of soil fertility and moisture trends, *i.e.*, soil homogeneity;
+- On a sloping trial site the moisture differs at different levels of the slope;
+  - Blocks are usually chosen at different levels up the slope so the that the difference in moisture between blocks is maximised and the difference in moisture within the blocks is minimised;
+- A trial site known to have different soil fertility trends should be blocked accordingly, separating the blocks based on the soil quality.
+
+## Blocking Example
+
+![<span style="font-size:0.25em;">Source: Prof Sarita Bennett, Curtin University</span>](assets/Plate_1_S_Bennett.jpg){fig-align="center" height=500}
+
+::: notes
+Here's a chickpea experiment where the lower block was affected with higher levels of Ascochyta blight and browning off following waterlogging during the winter. 
+
+Without blocking the trial would have been of no use.
+:::
+
+## Blocking Exercise
+
+![<span style="font-size:0.25em;">Source: Prof Sarita Bennett, Curtin University</span>](assets/Plate_1_S_Bennett.jpg){fig-align="center" height=300}
+
+::: {.callout-warning icon=false}
+## {{< fa clock >}} Exercise (2 min)
+What do you think blocking did that made this experiment useable?
+:::
+
+::: notes
+Here's a chickpea experiment where the lower block was affected with higher levels of Ascochyta blight and browning off following waterlogging during the winter. 
+
+Without blocking the trial would have been of no use.
+:::
+
+## Blocking
+
+It is important to avoid *confounding* when defining blocks.
+
+Examples:
+
+- Different time of sowing (TOS), TOS is a treatment, is assigned to different blocks in the field;
+- Different seeding rates (SR) are applied to different blocks in the field where SR is a treatment;
+- Different nitrogen rates (NR) are applied to different blocks in the field where NR is a treatment;
+- A complete block should contain each treatment replicated once.
+
+:::notes
+In poorly designed trials, blocks can be confounded with some treatments.
+In such cases the statistical model cannot distinguish between the variation due to the blocking and the variation due to the treatment.
+:::
+
+## Blocking Barley Varieties
+
+
+
+```{r}
+#| label: blocking-table
+#| message: false
+#| echo: false
+#| tbl-cap: Yield of barley varieties A, B, C and D in kg/ha.
+
+replicates <- tibble(
+   replicate = as_factor(c(1L, 2L, 3L, 4L, 5L)),
+   A = c(1120L, 880L, 1120L, 1240L, 1310L),
+   B = c(1240L, 940L, 1250L, 1360L, 1440L),
+   C = c(1360L, 1080L, 1440L, 1340L, 1460L),
+   D = c(1480L, 1170L, 1570L, 1420L, 1560L)
+)
+
+replicates |> 
+  gt() |> 
+  tab_options(table.font.size = 28) |> 
+  theme_gt_aagi()
+```
+
+
+
+:::notes
+The blocking structure here is introduced by replicates. 
+:::
+
+## Blocking Exercise
+
+
+
+```{r}
+#| label: blocking-table-2
+#| message: false
+#| echo: false
+#| tbl-cap: Yield of barley varieties A, B, C and D in kg/ha.
+
+replicates |> 
+  gt() |> 
+  tab_options(table.font.size = 28) |> 
+  theme_gt_aagi()
+```
+
+
+
+::: {.callout-warning icon=false}
+## {{< fa clock >}} Exercise (2 min)
+What pattern or patterns can you see in these data?
+:::
+
+:::notes
+Spend a few minutes and look at this table.
+
+Can you see patterns?
+
+What are they?
+:::
+
+## Blocking Barley Varieties
+
+
+
+```{r}
+#| label: blocking-table-facet-figure
+#| message: false
+#| echo: false
+#| fig-cap: Barley variety on the x-axis by yield (kg/ha) on the y-axis with variety represented as colour and replicate as shape.
+
+replicates |>
+  pivot_longer(!replicate, names_to = "variety", values_to = "yield") |>
+  ggplot(aes(
+    x = variety,
+    y = yield,
+    shape = replicate
+  )) +
+  geom_point(size = 4.5, colour = "#414042") +
+  ylab("yield (kg/ha)")
+```
+
+
+
+:::notes
+Does the pattern stand out more now that we've plotted the data?
+:::
+
+## Blocking Exercise
+
+![<span style="font-size:0.25em;">Source: Dr Karyn Reeves, SAGI West</span>](assets/Plate_4_K_Reeves.png){fig-align="center"}
+
+::: {.callout-warning icon=false}
+## {{< fa clock >}} Exercise (2 min)
+Which design is valid?
+
+What makes one invalid and the other valid?
+:::
+
+## Replication
+
+**Replication** implies independent repetition of the basic experiment.
+Replication is considered very important for valid experimental results due to the fact that it:
+
+- provides the means to estimate the experimental error variance;
+- provides the capacity to increase the precision of the estimates of the treatment means;
+- demonstrates the reproducibility of the results under current experimental settings; and
+- provides additional data in case of non-consistent results (presence of outliers due to environmental conditions like *e.g.*, waterlogged plots or affected by birds or elephants).
+
+## Replication
+
+### How Many?
+
+- The number of replications affects the precision of treatment means estimates
+- Should be chosen to provide acceptable power of statistical tests to identify differences between the means of treatment groups
+- Consider whether the planned level of replication may be expected to give standard errors which are acceptably small
+- Providing there is no huge variability, meaning:
+  - the area allocated to the trial is relatively homogeneous and
+  - the traits of interest are reasonably variable, 2 to 3 replicates should be sufficient
+
+:::notes
+1. The replication is usually mainly determined by considerations of the use of resources. 
+2. What is acceptably small standard errors are depends on the nature of the experiment and treatments.
+:::
+
+## Pseudo-replication
+
+![<span style="font-size:0.25em;">Source: Dr Karyn Reeves, SAGI West</span>](assets/Plate_5_K_Reeves.png){fig-align="center"}
+
+
+## Pseudo-replication
+
+![<span style="font-size:0.25em;">Source: Dr Karyn Reeves, SAGI West</span>](assets/Plate_5_K_Reeves.png){fig-align="center"}
+
+::: {.callout-warning icon=false}
+## {{< fa clock >}} Exercise (5 min)
+What makes this design invalid?
+
+What would you suggest to do that would make it a valid design?
+:::
+
+## Randomisation
+
+![](assets/math-lady.gif){fig-align="center" height="350"}
+
+:::notes
+**Randomisation** is the random assignment of treatments to plots (experimental units)
+
+- Randomisation is used to avoid:
+  - systematic bias; 
+  - selection bias; 
+  - accidental bias and 
+  - cheating
+
+Consider a paddock that has a gradient in the soil.
+If you put three treatments in the same order across the paddock, one treatment will always be in the best part of the soil in the block and one in the worst soil in the block, affecting the determinations you can make about your treatments.
+:::
+
+# Trial Designs{background-image="_extensions/AAGI-AUS/aagi/assets/title-slide-main.png" background-size="1050px auto" background-position="50% 85%"}
+
+## Trial Designs
+
+We will discuss the following four designs:
+
+- Complete Randomised Design (CRD);
+- Randomised Complete Block Design (RCBD);
+- Split-plot; and
+- OFE paddock-scale
+
+## Complete Randomised Design (CRD)
+
+- CRD is the simplest design without blocking
+- Treatments are allocated to the plots at random
+- *CRD is most useful in experimental settings where there are no other sources of variation than treatments*
+
+## Complete Randomised Design (CRD)
+
+:::{.nonincremental}
+- CRD is the simplest design without blocking
+- Treatments are allocated to the plots at random
+- *CRD is most useful in experimental settings where there are no other sources of variation than treatments*
+:::
+
+:::{.callout-note}
+Uncommonly used in agricultural paddocks for this reason
+:::
+
+:::notes
+I won't spend much time on this one, I wanted to mention it because I saw some of the examples sent through by GGA that referred to this layout, but really, they were randomised complete block design, which is the next design I'll talk about.
+:::
+
+## Randomised Complete Block Design (RCBD)
+
+RCBD is an experimental design with one blocking criterion, usually replicates.
+
+**All treatments occur an equal number of times in each block randomly.**
+
+## Randomised Complete Block Design (RCBC) Exercise
+
+::: {.callout-warning icon=false}
+## {{< fa clock >}} Exercise (5 min)
+Thinking back to the earlier barley yield example and following the description of blocking and randomisation, draw a trial map that has four varieties, "A", "B", "C" and "D" and five replicates (blocks) to test varietal differences in yield.
+
+Each variety should be represented in each replicate only once.
+
+***Recognise that this is just an exercise, it is not recommended to do this by hand.***
+*Using random number tables, a sequence or random numbers generated by a computer program are preferred.*
+*AAGI can help with this.*
+:::
+
+## Randomised Complete Block Design (RCBC)
+
+
+
+```{r}
+#| label: RCBD with {agricolae}
+#| echo: false
+
+trt <- c("A", "B", "C", "D")
+design <- design.rcbd(trt = trt, r = 5, seed = -513, serie = 2)
+
+design <- as.data.frame(design$sketch)
+colnames(design) <- c("Col 1", "Col 2", "Col 3", "Col 4")
+rownames(design) <- c("Rep 1", "Rep 2", "Rep 3", "Rep 4", "Rep 5")
+
+gt(design, rownames_to_stub = TRUE) |> 
+  theme_gt_aagi()
+```
+
+
+
+:::notes
+Here the replicates are the rows of the layout.
+This was generated in R using a library that specialises in designing agriculture trials like this and so has been randomised programmatically.
+:::
+
+## Split Plot Design
+
+### Example: Lupin Seeding Rate Trial
+:::{.nonincremental}
+- 6 commercial lupin varieties:
+  - Jenabillup (Je),
+  - Jindalee (Ji),
+  - Quilinock (Qu),
+  - Belara (Be),
+  - Mandelup (Ma) and
+  - Tanjil (Ta)
+- 3 seeding rates
+- 3 replicates
+:::
+
+:::notes
+What would be the best design to use?
+
+We may reason in the following way:
+There are 18 main plots = 6 varieties x 3 replicates. We may allocate the 3 seeding rates as subplots within the main plot. The seeding rates will be randomized within the main plot.
+We may allocate the main plots in an array of 6 columns by 3 rows, so columns 1 and 2 will constitute the 1st replicate, columns 3 and 4 - the 2nd replicate and columns 5 and 6 - the 3rd replicate. 
+:::
+
+## Split Plot Design Exercise
+
+:::{.callout-warning icon=false .nonincremental}
+## {{< fa clock >}} Exercise (10 min)
+Draw a map that has 6 columns and 3 rows, columns 1 and 2 are the main plots in the first 1st replicate (there will be six in each replicate) and so on.
+
+- 6 commercial lupin varieties:
+  - Jenabillup (Je),
+  - Jindalee (Ji),
+  - Quilinock (Qu),
+  - Belara (Be),
+  - Mandelup (Ma) and
+  - Tanjil (Ta)
+- 3 seeding rates
+- 3 replicates
+:::
+
+## Split Plot Design
+
+### Answer
+
+![<span style="font-size:0.25em;">Source: Dr Karyn Reeves, SAGI West</span>](assets/Plate_6_K_Reeves.png){fig-align="center"}
+
+## OFE Paddock Scale or Strip Design
+
+Depending on your goals:
+
+- A single strip is useful for demonstration and discussion,
+- At least one of these should be a nil strip if you wish to measure the response of the treatments,
+- Replicated treatments will provide more robust results.
+
+## OFE Strip Trial
+
+:::{.callout-warning icon=false .nonincremental}
+## {{< fa clock >}} Exercise (10 min)
+Design a randomised complete block strip trial design with three replicates.
+
+Strips will be arranged to overlay 2-3 farm management units (soil types, soil restraints), consider the 3-soil paddock I showed earlier.
+
+Treatments:
+
+  - Depth of seeding: 5, 10cm
+  - Fertiliser: Standard Rate(S), Nil (N)
+:::
+
+## OFE Strip Trial Design
+
+### One Possible Answer
+
+
+
+```{r}
+#| label: strip-plot design
+#| echo: false
+#| fig-cap: Complete randomised strip plot trial with four treatments and three replicates
+
+plots <- 1:12
+reps <- c(rep(1, 4), rep(2, 4), rep(3, 4))
+
+trts <- c(
+  sample(1:4, size = 4, replace = FALSE),
+  sample(1:4, size = 4, replace = FALSE),
+  sample(1:4, size = 4, replace = FALSE)
+)
+trts <- gsub(1, "N5", trts)
+trts <- gsub(2, "N10", trts)
+trts <- gsub(3, "S5", trts)
+trts <- gsub(4, "S10", trts)
+y <- rep(1, 12) # this is just for ggplot to have a y-axis
+strip_plots <- tibble(
+  "plot" = as.factor(plots),
+  "rep" = as.factor(reps),
+  "treatment" = as.factor(trts),
+  y
+)
+
+ggplot(strip_plots, aes(x = plot, y = y)) +
+  geom_col(aes(fill = treatment)) +
+  ylab("") +
+  scale_fill_manual(values = c(
+    "N5" = "#B6D438",
+    "N10" = "#54921E",
+    "S5" = "#FFBC42",
+    "S10" = "#ec8525"
+  )) +
+  facet_wrap(. ~ rep, scales = "free_x") +
+  theme(axis.text.y = element_blank(), axis.ticks.y = element_blank())
+```
+
+
+
+## Wrapping Up
+
+Remember
+
+- Keep the treatments simple,
+  - complexity adds cost and time;
+  - and weakens the ability of the trial to measure differences
+- Replicate;
+- Randomise;
+- Talk with AAGI first, it may save you time, money and headaches!
+
+## &nbsp;
+
+::: {.callout-important icon=false}
+## {{< fa quote-right >}} &nbsp;
+
+*To consult the statistician after an experiment is finished is often merely to ask him to conduct a post mortem examination. He can perhaps say what the experiment died of.*  
+- R.A. Fisher, [-@fisher1938]
+:::
+
+# Thank You{background-image="_extensions/AAGI-AUS/aagi/assets/title-slide-main.png" background-size="1050px auto" background-position="50% 85%"}
+
+# References
+
+
