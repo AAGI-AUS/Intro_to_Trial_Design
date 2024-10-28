@@ -51,8 +51,8 @@ jobs:
           version: "pre-release"
           tinytex: true # required for PDF reports
 
-      - name: Add extension directly into demos
-        working-directory: ./docs/demos
+      - name: Add extension
+        working-directory: ./docs
         run: |
           quarto add AAGI-AUS/AAGIQuarto --no-prompt
 
